@@ -422,7 +422,10 @@ footer {
   fill: var(--main-color);
 }
 .page__radio input {
+  position: relative;
+  left: 8px;
   width: 1px;
+  z-index: -1;
 }
 .page__radio input:checked ~ svg rect:first-child {
   fill: var(--main-color);
@@ -927,6 +930,58 @@ footer {
   }
 }
 
+.user {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.user__avatar img {
+  width: 47px;
+  height: 47px;
+  object-fit: contain;
+}
+.user__name {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--accent-color);
+  font-size: var(--fs-18-16);
+  line-height: 135%;
+}
+.user__job {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #1C7D87;
+  font-size: var(--fs-16-14);
+  line-height: 150%;
+}
+
+.feedback-item {
+  background: #fff;
+  border-radius: calc(var(--border-radius-main) * 2);
+  padding: calc(var(--page-gap) / 2.5);
+}
+.feedback-item__body {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.feedback-item__footer {
+  margin-top: 16px;
+}
+.feedback-item__more {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--accent-color);
+  font-size: var(--fs-16-14);
+  line-height: 150%;
+}
+
 /* FEATURES */
 .form input {
   height: var(--size-60-50) !important;
@@ -972,9 +1027,8 @@ footer {
   color: #fff;
   background: transparent;
   border-radius: 50px;
-  border: none;
   outline: none;
-  box-shadow: 0 0 0 0.07rem #fff;
+  border: 1px solid #fff;
   transition: all 0.2s ease-out;
 }
 .search-form input::placeholder {
@@ -1070,6 +1124,12 @@ footer {
   line-height: 150%;
 }
 
+.feedback-slider__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
 /* WIGETS */
 .header {
   position: sticky;
@@ -1125,12 +1185,6 @@ footer {
     background: none;
     box-shadow: none;
   }
-}
-
-.footer {
-  margin-top: var(--page-gap);
-  padding: 20px 0;
-  background: #fff;
 }
 
 .pricing-hero {
@@ -1301,7 +1355,7 @@ footer {
     padding: 12px 16px;
   }
 }
-@media (max-width: 767px) and (min-width: 0px) {
+@media (max-width: 991px) and (min-width: 0px) {
   .pricing-details__table table thead {
     position: static;
     top: 0;
@@ -1324,10 +1378,13 @@ footer {
 }
 
 .faq {
-  display: block;
   margin-top: var(--page-gap);
   padding: calc(var(--page-gap) * 1.5) 0;
   background: #fff;
+}
+
+.feedback {
+  margin: var(--page-gap) 0;
 }
 
 /* PAGES */

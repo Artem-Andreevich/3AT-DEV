@@ -191,7 +191,7 @@ block content
 									button.btn-fill.btn-fill--accent
 											span Enroll Now
 
-		articles.faq
+		article.faq
 			.container 
 				h2.page__title Frequently Asked Questions
 				.faq-accordion.accordion#faq-accordion
@@ -215,5 +215,37 @@ block content
 						div.faq-accordion__collapse.collapse#faq4(data-bs-parent="#accordionExample")
 							div.faq-accordion__content
 								p Это тело аккордеона первого элемента. Оно отображается по умолчанию, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента.
+					.faq-accordion__item
+						button.faq-accordion__button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#faq5") Can I download the Excel files and financial modeling templates?
+						div.faq-accordion__collapse.collapse#faq5(data-bs-parent="#accordionExample")
+							div.faq-accordion__content
+								p Это тело аккордеона первого элемента. Оно отображается по умолчанию, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть поме, хотя переход ограничивает переполнение.
+					.faq-accordion__item
+						button.faq-accordion__button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#faq6") How long do I have to complete the course?
+						div.faq-accordion__collapse.collapse#faq6(data-bs-parent="#accordionExample")
+							div.faq-accordion__content
+								p Это тело аккордеона первого элемента. Оно отображается по умолчанию, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть поме, хотя переход ограничивает переполнение.
+					.faq-accordion__item
+						button.faq-accordion__button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#faq7") Are courses verified?
+						div.faq-accordion__collapse.collapse#faq7(data-bs-parent="#accordionExample")
+							div.faq-accordion__content
+								p Это тело аккордеона первого элемента. Оно отображается по умолчанию, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента.
+					.faq-accordion__item
+						button.faq-accordion__button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#faq8") Can I email the instructor if I have questions?
+						div.faq-accordion__collapse.collapse#faq8(data-bs-parent="#accordionExample")
+							div.faq-accordion__content
+								p Это тело аккордеона первого элемента. Оно отображается по умолчанию, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента.
+
+		article.feedback
+			.container 
+				h2.page__title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at erat eget eros aliquam mattis 
+				.feedback-slider 
+					.feedback-slider__items
+						include ../components/feedback-item
+						include ../components/feedback-item
+						include ../components/feedback-item
+					.feedback-slider__arrows
+
+
 
 

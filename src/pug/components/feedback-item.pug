@@ -1,0 +1,8 @@
+include ../layouts/mixins.pug
+article.feedback-item
+    .feedback-item__body
+        include ./user
+        blockquote.feedback-item__feed 
+            p “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at erat eget eros aliquam mattis ut vehicula sapien. Nam a tortor nulla. Sed sed erat eget enim feugiat dapibus et non justo ...”
+    footer.feedback-item__footer
+        a.feedback-item__more(href="#") Read more

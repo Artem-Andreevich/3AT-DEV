@@ -107,7 +107,10 @@
 			svg rect:last-child { fill: var(--main-color); }
 		}
 		input {
+			position: relative;
+			left: 8px;
 			width: 1px;
+			z-index: -1;
 			&:checked {
 				~ svg rect:first-child { fill: var(--main-color); }
 				~ svg rect:last-child { fill: #fff; }
@@ -577,6 +580,47 @@
 	}
 
 }
+.user {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+	&__avatar img {
+		width: 47px;
+		height: 47px;
+		object-fit: contain;
+	}
+	&__name {
+		@include font(600);
+		color: var(--accent-color);
+		font-size: var(--fs-18-16);
+		line-height: 135%;
+	}
+	&__job {
+		@include font(400);
+		color: #1C7D87;
+		font-size: var(--fs-16-14);
+		line-height: 150%;
+	}
+}
+.feedback-item {
+	background: #fff;
+	border-radius: calc(var(--border-radius-main) * 2);
+	padding: calc(var(--page-gap) / 2.5);
+	&__body	{
+		display: flex;
+		flex-direction: column;
+		gap: 22px
+	}
+	&__footer {
+		margin-top: 16px;
+	}
+	&__more {
+		@include font(700);
+		color: var(--accent-color);
+		font-size: var(--fs-16-14);
+		line-height: 150%;
+	}
+}
  
 
 /* FEATURES */
@@ -622,9 +666,8 @@
 		color: #fff;
 		background: transparent;
 		border-radius: 50px;
-		border: none;
 		outline: none;
-		box-shadow: 0 0 0 0.07rem #fff;
+		border: 1px solid #fff;
 		transition: $trans;
 		&::placeholder {
 			@include font(400);
@@ -710,6 +753,13 @@
 		line-height: 150%
 	}
 }
+.feedback-slider {
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 40px;
+	}
+}
 
 
 /* WIGETS */
@@ -760,12 +810,6 @@
 		}
 	}
 }
-.footer {
-	margin-top: var(--page-gap);
-	padding: 20px 0;
-	background: #fff;
-}
-
 .pricing-hero {
 	min-height: calc(var(--page-gap) * 8);
 	background: url(../img/bg.svg) no-repeat;
@@ -926,8 +970,7 @@
 				}
 			}
 		}
-
-		@include breakpoint(sm) {
+		@include breakpoint(md) {
 			table thead {
 				position: static;
 				top: 0;
@@ -949,10 +992,12 @@
 	}
 }
 .faq {
-	display: block;
 	margin-top: var(--page-gap);
 	padding: calc(var(--page-gap) * 1.5) 0;
 	background: #fff;
+}
+.feedback {
+	margin: var(--page-gap) 0;
 }
 
 
