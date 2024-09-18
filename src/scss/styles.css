@@ -595,17 +595,17 @@ footer {
   border-radius: 50%;
 }
 .check-icon--main {
-  background: url(../../img/check-main.svg) no-repeat;
+  background: url(../img/check-main.svg) no-repeat;
   background-size: contain;
   background-position: center;
 }
 .check-icon--accent {
-  background: url(../../img/check-accent.svg) no-repeat;
+  background: url(../img/check-accent.svg) no-repeat;
   background-size: contain;
   background-position: center;
 }
 .check-icon--miss {
-  background: url(../../img/check-miss.svg) no-repeat;
+  background: url(../img/check-miss.svg) no-repeat;
   background-size: contain;
   background-position: center;
 }
@@ -650,7 +650,7 @@ footer {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: url(../../img/help-tooltip.svg) no-repeat;
+  background: url(../img/help-tooltip.svg) no-repeat;
   background-size: cover;
   z-index: 4;
 }
@@ -806,7 +806,7 @@ footer {
   align-items: baseline;
 }
 .pricing-card__includes__list li::before {
-  content: url(../../img/check-mark-li.svg);
+  content: url(../img/check-mark-li.svg);
   margin-right: 12px;
 }
 .pricing-card .help-tooltip {
@@ -817,7 +817,7 @@ footer {
   background-color: var(--accent-color);
 }
 .pricing-card--accent .pricing-card__includes__list li::before {
-  content: url(../../img/check-mark-li2.svg);
+  content: url(../img/check-mark-li2.svg);
 }
 @media (max-width: 991px) and (min-width: 0px) {
   .pricing-card {
@@ -936,7 +936,7 @@ footer {
 
 .pricing-hero {
   min-height: calc(var(--page-gap) * 8);
-  background: url(../../img/bg.svg) no-repeat;
+  background: url(../img/bg.svg) no-repeat;
   background-size: cover;
   background-position: bottom center;
 }

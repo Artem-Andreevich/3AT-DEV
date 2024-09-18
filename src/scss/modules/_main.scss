@@ -269,17 +269,17 @@
 	height: 24px;
 	border-radius: 50%;
 	&--main {
-		background: url(../../img/check-main.svg) no-repeat;
+		background: url(../img/check-main.svg) no-repeat;
 		background-size: contain;
 		background-position: center;
 	}
 	&--accent {
-		background: url(../../img/check-accent.svg) no-repeat;
+		background: url(../img/check-accent.svg) no-repeat;
 		background-size: contain;
 		background-position: center;
 	}
 	&--miss {
-		background: url(../../img/check-miss.svg) no-repeat;
+		background: url(../img/check-miss.svg) no-repeat;
 		background-size: contain;
 		background-position: center;
 	}
@@ -321,7 +321,7 @@
 	width: 16px;
 	height: 16px;
 	border-radius: 50%;
-	background: url(../../img/help-tooltip.svg) no-repeat;
+	background: url(../img/help-tooltip.svg) no-repeat;
 	background-size: cover;
 	z-index: 4;
 	&::after {
@@ -455,7 +455,7 @@
 				display: flex;
 				align-items: baseline;
 				&::before {
-					content: url(../../img/check-mark-li.svg);
+					content: url(../img/check-mark-li.svg);
 					margin-right: 12px;
 				}
 			}
@@ -470,7 +470,7 @@
 			background-color: var(--accent-color);
 		}
 		&__includes__list li::before {
-			content: url(../../img/check-mark-li2.svg);
+			content: url(../img/check-mark-li2.svg);
 		}
 	}
 	@include breakpoint(md) {
@@ -588,7 +588,7 @@
 
 .pricing-hero {
 	min-height: calc(var(--page-gap) * 8);
-	background: url(../../img/bg.svg) no-repeat;
+	background: url(../img/bg.svg) no-repeat;
 	background-size: cover;
 	background-position: bottom center;
 
