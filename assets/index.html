@@ -12,6 +12,7 @@
     <link rel="icon" href="fav.svg" type="image/svg+xml"/>
     <title></title>
     <script src="js/libs/jquery.min.js" defer="defer"></script>
+    <script src="js/libs/popper.min.js" defer="defer"></script>
     <script src="js/libs/bootstrap.min.js" defer="defer"></script>
     <script src="js/libs/slick.min.js" defer="defer"></script>
     <script src="js/libs/anime.min.js" defer="defer"></script>
@@ -49,86 +50,253 @@
           </div>
         </div>
       </header>
-      <main class="page">
-        <div class="container">
-          <div class="page__content">
-            <h1>Pricing Plans</h1>
-          </div>
-          <div class="breadcrumb">
-            <nav>
-              <ol class="breadcrumb__list"> 
-                <li class="breadcrumb__item"><a href="#">Главная </a></li>
-                <li class="breadcrumb__item"><a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Продукция</a>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-                <li class="breadcrumb__item"><a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Вентиляторы Bahcivanmotor</a>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-                <li class="breadcrumb__item"><a href="#">Радиальные вентиляторы</a></li>
-              </ol>
-            </nav>
-          </div>
-          <div class="breadcrumb">
-            <nav>
-              <ol class="breadcrumb__list"> 
-                <li class="breadcrumb__item"><a href="#">Главная </a></li>
-                <li class="breadcrumb__item"><a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Продукция</a>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-                <li class="breadcrumb__item"><a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Вентиляторы Bahcivanmotor</a>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-                <li class="breadcrumb__item"><a href="#">Радиальные вентиляторы</a></li>
-              </ol>
-            </nav>
-            <h2 class="page__title"></h2>
-          </div>
-          <nav class="pagination">
-            <ol class="pagination__list">
-              <li><a class="pagination__link active" href="#">1</a></li>
-              <li><a class="pagination__link" href="#">2</a></li>
-              <li><a class="pagination__link" href="#">3</a></li>
-              <li><a class="pagination__link" href="#">4</a></li>
-              <li><a class="pagination__link" href="#">5</a></li>
-            </ol>
-            <ol class="pagination__list">
-              <li><a class="btn pagination__arrow" href="#">
-                            <svg class="icon icon-rotate-180" width="12px" height="12px">
-                              <use xlink:href="#right-arr"></use>
-                            </svg></a></li>
-              <li><a class="btn pagination__arrow" href="#">
-                            <svg class="icon" width="12px" height="12px">
-                              <use xlink:href="#right-arr"></use>
-                            </svg></a></li>
-            </ol>
-          </nav>
-        </div>
-        <div class="container my-5"> 
-          <div class="main-slider">
-            <div class="main-slider__items">
-              <div><img src="img/c-map.webp" alt=""/></div>
-              <div><img src="img/c-map.webp" alt=""/></div>
-              <div><img src="img/c-map.webp" alt=""/></div>
+      <main class="page pricing-page">
+        <div class="pricing-hero">
+          <div class="container">
+            <div class="pricing-hero__hgroup"> 
+              <h1 class="pricing-hero__title">Pricing Plans</h1>
+              <p class="pricing-hero__descr">Upgrade your skills. Choose a plan that works for your budget and career goals.</p>
             </div>
-            <div class="main-slider__dots"></div>
           </div>
         </div>
+        <div class="pricing-cards">
+          <div class="container">
+            <div class="pricing-cards__items"> 
+              <section class="pricing-card">
+                <header class="pricing-card__header"> <span>Most popular!</span></header>
+                <div class="pricing-card__body"> 
+                  <div class="pricing-card__hgroup"> 
+                    <h2 class="pricing-card__title">Basic</h2>
+                    <p class="pricing-card__descr">All Access Membership</p>
+                  </div>
+                  <p class="pricing-card__descr">Includes all courses from many programs</p>
+                  <div class="pricing-card__plan">
+                    <h3 class="pricing-card__subtitle">Pick your plan:</h3>
+                    <form class="pricing-card__form" action="#"> 
+                      <label class="page__radio">
+                        <input type="radio" name="radio" value="47" checked="checked"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 0.253167 0.253167">
+                          <rect fill="#ED4300" width="0.253167" height="0.253167" rx="0.126584" ry="0.126584"></rect>
+                          <rect fill="white" x="0.0752923" y="0.0752921" width="0.096584" height="0.096584" rx="0.126584" ry="0.126584"></rect>
+                        </svg><span class="page__radio__content"><span class="pricing-card__price"><span>$47</span><span>/month</span></span><span class="pricing-card__price__pay">(pay annually — $564 / year)</span><span class="pricing-card__price__sale">Save 30%!</span></span>
+                      </label>
+                      <label class="page__radio">
+                        <input type="radio" name="radio" value="87"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 0.253167 0.253167">
+                          <rect fill="#ED4300" width="0.253167" height="0.253167" rx="0.126584" ry="0.126584"></rect>
+                          <rect fill="white" x="0.0752923" y="0.0752921" width="0.096584" height="0.096584" rx="0.126584" ry="0.126584"></rect>
+                        </svg><span class="page__radio__content"><span class="pricing-card__price"><span>$87</span><span>/month</span></span><span class="pricing-card__price__pay">(pay per month)</span></span>
+                      </label>
+                      <button class="btn-fill btn-fill--main"> <span>Enroll Now</span></button>
+                    </form>
+                  </div>
+                  <div class="pricing-card__includes"> 
+                    <p>Includes:</p>
+                    <ul class="pricing-card__includes__list">
+                      <li>
+                        <p>All 100+ Courses</p>
+                        <button class="help-tooltip" type="button" data-bs-toggle="tooltip" data-bs-custom-class="tooltip" data-bs-placement="right" data-bs-title="Default tooltip. Here you’ll find something on the left."></button>
+                      </li>
+                      <li>
+                        <p>All 4 Certificate Programs</p>
+                        <button class="help-tooltip" type="button" data-bs-toggle="tooltip" data-bs-custom-class="tooltip" data-bs-placement="right" data-bs-title="Default tooltip. Here you’ll find something on the left."></button>
+                      </li>
+                      <li>
+                        <p>Excel, PPT, and PDF Files</p>
+                      </li>
+                      <li>
+                        <p>Digital Blockchain Verified Certificates</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <section class="pricing-card pricing-card--accent">
+                <header class="pricing-card__header"> <span>Most benefits!</span></header>
+                <div class="pricing-card__body"> 
+                  <div class="pricing-card__hgroup"> 
+                    <h2 class="pricing-card__title">Full-Immersion</h2>
+                    <p class="pricing-card__descr">All Access Membership</p>
+                  </div>
+                  <p class="pricing-card__descr">Everything in the Basic plan, plus more</p>
+                  <div class="pricing-card__plan">
+                    <form class="pricing-card__form" action="#"> 
+                      <label class="page__radio">
+                        <input type="radio" name="radio" value="47" checked="checked"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 0.253167 0.253167">
+                          <rect fill="#ED4300" width="0.253167" height="0.253167" rx="0.126584" ry="0.126584"></rect>
+                          <rect fill="white" x="0.0752923" y="0.0752921" width="0.096584" height="0.096584" rx="0.126584" ry="0.126584"></rect>
+                        </svg><span class="page__radio__content"><span class="pricing-card__price"><span>$77</span><span>/month</span></span><span class="pricing-card__price__pay">(pay annually — $924 / year)</span></span>
+                      </label>
+                      <button class="btn-fill btn-fill--accent"><span>Enroll Now</span></button>
+                    </form>
+                  </div>
+                  <div class="pricing-card__includes"> 
+                    <p>Everything in Basic, plus:</p>
+                    <ul class="pricing-card__includes__list">
+                      <li>
+                        <p>Capital IQ & EIKON Partner Integrations</p>
+                      </li>
+                      <li>
+                        <p>Premium Email Support</p>
+                        <button class="help-tooltip" type="button" data-bs-toggle="tooltip" data-bs-custom-class="tooltip" data-bs-placement="right" data-bs-title="Default tooltip. Here you’ll find something on the left."></button>
+                      </li>
+                      <li>
+                        <p>Model Review & Feedback</p>
+                        <button class="help-tooltip" type="button" data-bs-toggle="tooltip" data-bs-custom-class="tooltip" data-bs-placement="right" data-bs-title="Default tooltip. Here you’ll find something on the left."></button>
+                      </li>
+                      <li>
+                        <p>Additional Case Studies</p>
+                        <button class="help-tooltip" type="button" data-bs-toggle="tooltip" data-bs-custom-class="tooltip" data-bs-placement="right" data-bs-title="Default tooltip. Here you’ll find something on the left."></button>
+                      </li>
+                      <li>
+                        <p>Resume & Cover Letter Review</p>
+                      </li>
+                      <li>
+                        <p>A FREE Modeling Competition Entry</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-details"> 
+          <div class="container">
+            <div class="pricing-details__table">
+              <table>
+                <thead> 
+                  <tr> 
+                    <td> </td>
+                    <td class="cell-center cell-main"> 
+                      <div class="pricing-details__hgroup"> 
+                        <h4 class="pricing-details__title">Basic</h4>
+                        <p class="pricing-details__descr">All Access Membership</p>
+                      </div>
+                      <p class="pricing-details__per-year">$564 / year</p>
+                    </td>
+                    <td class="cell-center cell-accent">
+                      <div class="pricing-details__hgroup"> 
+                        <h4 class="pricing-details__title">Full-Immersion</h4>
+                        <p class="pricing-details__descr">All Access Membership</p>
+                      </div>
+                      <p class="pricing-details__per-year">$924 / year</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody> 
+                  <tr> 
+                    <td class="cell-detail">
+                      <p>All 100+ Courses</p>
+                      <button class="help-tooltip" type="button" data-bs-toggle="tooltip" data-bs-custom-class="tooltip" data-bs-placement="right" data-bs-title="Default tooltip. Here you’ll find something on the left."></button>
+                    </td>
+                    <td class="cell-center"><span class="check-icon check-icon--main"></span></td>
+                    <td class="cell-center"><span class="check-icon check-icon--accent"></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="cell-detail">
+                      <p>All Certificate Programs</p>
+                      <button class="help-tooltip" type="button" data-bs-toggle="tooltip" data-bs-custom-class="tooltip" data-bs-placement="right" data-bs-title="Default tooltip. Here you’ll find something on the left."></button>
+                    </td>
+                    <td class="cell-center"><span class="check-icon check-icon--main"></span></td>
+                    <td class="cell-center"><span class="check-icon check-icon--accent"></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="cell-detail">
+                      <p>Quizzes, Assignments, and Tests</p>
+                    </td>
+                    <td class="cell-center"><span class="check-icon check-icon--main"></span></td>
+                    <td class="cell-center"><span class="check-icon check-icon--accent"></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="cell-detail">
+                      <p>Excel, PPT, and PDF Files</p>
+                    </td>
+                    <td class="cell-center"><span class="check-icon check-icon--main"></span></td>
+                    <td class="cell-center"><span class="check-icon check-icon--accent"></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="cell-detail">
+                      <p>Digital Blockchain Verified Certificate</p>
+                    </td>
+                    <td class="cell-center"><span class="check-icon check-icon--main"></span></td>
+                    <td class="cell-center"><span class="check-icon check-icon--accent"></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="cell-detail">
+                      <p>Another Shared Benefit</p>
+                    </td>
+                    <td class="cell-center"><span class="check-icon check-icon--main"></span></td>
+                    <td class="cell-center"><span class="check-icon check-icon--accent"></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="cell-detail">
+                      <p>Another Shared Benefit</p>
+                    </td>
+                    <td class="cell-center"><span class="check-icon check-icon--main"></span></td>
+                    <td class="cell-center"><span class="check-icon check-icon--accent"></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="cell-detail">
+                      <p>Another Shared Benefit</p>
+                    </td>
+                    <td class="cell-center"><span class="check-icon check-icon--miss"></span></td>
+                    <td class="cell-center"><span class="check-icon check-icon--accent"></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="cell-detail">
+                      <p>All Certificate Programs</p>
+                      <button class="help-tooltip" type="button" data-bs-toggle="tooltip" data-bs-custom-class="tooltip" data-bs-placement="right" data-bs-title="Default tooltip. Here you’ll find something on the left."></button>
+                    </td>
+                    <td class="cell-center"><span class="check-icon check-icon--miss"></span></td>
+                    <td class="cell-center"><span class="check-icon check-icon--accent"></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="cell-detail">
+                      <p>All Certificate Programs</p>
+                      <button class="help-tooltip" type="button" data-bs-toggle="tooltip" data-bs-custom-class="tooltip" data-bs-placement="right" data-bs-title="Default tooltip. Here you’ll find something on the left."></button>
+                    </td>
+                    <td class="cell-center"><span class="check-icon check-icon--miss"></span></td>
+                    <td class="cell-center"><span class="check-icon check-icon--accent"></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="cell-detail">
+                      <p>All Certificate Programs</p>
+                      <button class="help-tooltip" type="button" data-bs-toggle="tooltip" data-bs-custom-class="tooltip" data-bs-placement="right" data-bs-title="Default tooltip. Here you’ll find something on the left."></button>
+                    </td>
+                    <td class="cell-center"><span class="check-icon check-icon--miss"></span></td>
+                    <td class="cell-center"><span class="check-icon check-icon--accent"></span></td>
+                  </tr>
+                  <tr> 
+                    <td class="cell-detail">
+                      <p>One FREE Financial Modeling Competition</p>
+                      <button class="help-tooltip" type="button" data-bs-toggle="tooltip" data-bs-custom-class="tooltip" data-bs-placement="right" data-bs-title="Default tooltip. Here you’ll find something on the left."></button>
+                    </td>
+                    <td class="cell-center"><span class="check-icon check-icon--miss"></span></td>
+                    <td class="cell-center"><span class="check-icon check-icon--accent"></span></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr> 
+                    <td> </td>
+                    <td class="cell-center">
+                      <h4 class="pricing-details__title">Basic</h4>
+                      <p class="pricing-details__per-year">$564 / year</p>
+                      <button class="btn-fill btn-fill--main"> <span>Enroll Now</span></button>
+                    </td>
+                    <td class="cell-center">
+                      <h4 class="pricing-details__title">Full-Immersion</h4>
+                      <p class="pricing-details__per-year">$924 / year</p>
+                      <button class="btn-fill btn-fill--accent"><span>Enroll Now</span></button>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="faq"></div>
       </main>
       <footer class="footer">
         <div class="container">footer</div>

@@ -4,6 +4,7 @@
 	
 	--fs-72-32: 4.5rem;
 	--fs-72-24: var(--fs-72-32);
+	--fs-56-32: 3.5rem;
 	--fs-48-24: 3rem;
 	--fs-48-sm-18: var(--fs-48-24);
 	--fs-48-xs-18: var(--fs-48-24);
@@ -29,17 +30,19 @@
 	--size-60-50: 60px;
 	--size-60-40: 60px;
 	--size-50-40: 50px;
+	--size-48-40: 48px;
 	--size-50-30: 50px;
 	--size-40-30: 40px;
 	--size-30-25: 30px;
 
-	--border-raduis-24: 24px;
-	--border-raduis-18: 18px;
-	--border-raduis-16: 16px;
-	--border-raduis-main: 2px;
+	--border-radius-24: 24px;
+	--border-radius-18: 18px;
+	--border-radius-16: 16px;
+	--border-radius-main: 4px;
 
-	--page-gap: 60px;
+	--page-gap: 80px;
 	--header-height: 64px;
+	--pricing-card-gap: 48px;
 
 	--main-color: #3271D2;
 	--main-color-hover: #3271D2;
@@ -52,6 +55,8 @@
 	--body-bg-color: #fff; 
 
 	--shadow: 8px 8px 15px 0px rgba(0,0,0,.1);
+	--shadow-xs: 0px 3px 6px 0px #0000000A;
+	--shadow-md: 0px 10px 20px 0px #0000000F;
 }
 
 @include breakpoint(xxl) {
@@ -76,6 +81,7 @@
 @include breakpoint(lg) {
 	:root {
         --fs-72-32: 2.25rem;
+		--fs-56-32: 2.625rem;
         --fs-48-24: 2rem;
         --fs-24-18: 1.125rem;
         --fs-24-lg-16: 1rem;
@@ -85,9 +91,12 @@
         --size-60-40: 40px;
         --size-50-40: 40px;
         --size-50-30: 30px;
+		--size-48-40: 40px;
         --size-40-30: 30px;
         --size-30-25: 25px;
         --wrapper-gap: 40px;
+		--pricing-card-gap: 32px;
+		--page-gap: 60px;
 	}
 }
 
@@ -108,6 +117,9 @@
         --fs-16-sm-12: 0.75rem;
         --fs-16-sm-10: 0.625rem;
         --fs-14-sm-10: 0.625rem;
+		--page-gap: 50px;
+		--pricing-card-gap: 24px;
+
 	}
 }
 @include breakpoint(xs) {

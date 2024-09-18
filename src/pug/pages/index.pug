@@ -1,23 +1,197 @@
 extends ../layouts/head.pug 
 
 block variables
-	- const pagetitle = "Главная";
+	- const pagetitle = "Цены";
 
 block content
-	main.page
-		.container
-			.page__content
-				h1 Pricing Plans
-			include ../components/bread
-			include ../components/bread-title
-			include ../components/pag
-		.container.my-5 
-			.main-slider
-				.main-slider__items
-					div
-						img(src="img/c-map.webp", alt="")
-					div
-						img(src="img/c-map.webp", alt="")
-					div
-						img(src="img/c-map.webp", alt="")
-				.main-slider__dots
+	main.page.pricing-page
+		.pricing-hero
+			.container
+				.pricing-hero__hgroup 
+					h1.pricing-hero__title Pricing Plans
+					p.pricing-hero__descr Upgrade your skills. Choose a plan that works for your budget and career goals.
+		.pricing-cards
+			.container
+				.pricing-cards__items 
+					section.pricing-card
+						header.pricing-card__header 
+							span Most popular!
+						.pricing-card__body 
+							.pricing-card__hgroup 
+								h2.pricing-card__title Basic
+								p.pricing-card__descr All Access Membership
+							p.pricing-card__descr Includes all courses from many programs
+							.pricing-card__plan
+								h3.pricing-card__subtitle Pick your plan:
+								form.pricing-card__form(action="#") 
+									label.page__radio
+										input(type="radio" name="radio" value="47" checked)
+										svg(xmlns='http://www.w3.org/2000/svg', width='16px', height='16px', viewBox='0 0 0.253167 0.253167')
+											rect(fill='#ED4300', width='0.253167', height='0.253167', rx='0.126584', ry='0.126584')
+											rect(fill='white', x='0.0752923', y='0.0752921', width='0.096584', height='0.096584', rx='0.126584', ry='0.126584')
+										span.page__radio__content
+											span.pricing-card__price
+												span $47
+												span /month
+											span.pricing-card__price__pay (pay annually — $564 / year)
+											span.pricing-card__price__sale Save 30%!
+									label.page__radio
+										input(type="radio" name="radio" value="87")
+										svg(xmlns='http://www.w3.org/2000/svg', width='16px', height='16px', viewBox='0 0 0.253167 0.253167')
+											rect(fill='#ED4300', width='0.253167', height='0.253167', rx='0.126584', ry='0.126584')
+											rect(fill='white', x='0.0752923', y='0.0752921', width='0.096584', height='0.096584', rx='0.126584', ry='0.126584')
+										span.page__radio__content
+											span.pricing-card__price
+												span $87
+												span /month
+											span.pricing-card__price__pay (pay per month)
+											
+									button.btn-fill.btn-fill--main 
+										span Enroll Now
+							.pricing-card__includes 
+								p Includes:
+								ul.pricing-card__includes__list
+									li
+										p All 100+ Courses
+										include ../components/help-button
+									li
+										p All 4 Certificate Programs
+										include ../components/help-button
+									li: p Excel, PPT, and PDF Files
+									li: p Digital Blockchain Verified Certificates
+					
+					section.pricing-card.pricing-card--accent
+						header.pricing-card__header 
+							span Most benefits!
+						.pricing-card__body 
+							.pricing-card__hgroup 
+								h2.pricing-card__title Full-Immersion
+								p.pricing-card__descr All Access Membership
+							p.pricing-card__descr Everything in the Basic plan, plus more
+							.pricing-card__plan
+								form.pricing-card__form(action="#") 
+									label.page__radio
+										input(type="radio" name="radio" value="47" checked)
+										svg(xmlns='http://www.w3.org/2000/svg', width='16px', height='16px', viewBox='0 0 0.253167 0.253167')
+											rect(fill='#ED4300', width='0.253167', height='0.253167', rx='0.126584', ry='0.126584')
+											rect(fill='white', x='0.0752923', y='0.0752921', width='0.096584', height='0.096584', rx='0.126584', ry='0.126584')
+										span.page__radio__content
+											span.pricing-card__price
+												span $77
+												span /month
+											span.pricing-card__price__pay (pay annually — $924 / year)
+										
+									button.btn-fill.btn-fill--accent
+										span Enroll Now
+							.pricing-card__includes 
+								p Everything in Basic, plus:
+								ul.pricing-card__includes__list
+									li: p Capital IQ & EIKON Partner Integrations
+									li
+										p Premium Email Support
+										include ../components/help-button
+									li
+										p Model Review & Feedback
+										include ../components/help-button
+									li
+										p Additional Case Studies
+										include ../components/help-button
+									li: p Resume & Cover Letter Review
+									li: p A FREE Modeling Competition Entry
+		
+		.pricing-details 
+			.container
+				.pricing-details__table
+					table
+						thead 
+							tr 
+								td 
+								td.cell-center.cell-main 
+									.pricing-details__hgroup 
+										h4.pricing-details__title Basic
+										p.pricing-details__descr All Access Membership
+									p.pricing-details__per-year $564 / year
+								td.cell-center.cell-accent
+									.pricing-details__hgroup 
+										h4.pricing-details__title Full-Immersion
+										p.pricing-details__descr All Access Membership
+									p.pricing-details__per-year $924 / year
+						tbody 
+							tr 
+								td.cell-detail
+									p All 100+ Courses
+									include ../components/help-button
+								td.cell-center: span.check-icon.check-icon--main
+								td.cell-center: span.check-icon.check-icon--accent
+							tr 
+								td.cell-detail
+									p All Certificate Programs
+									include ../components/help-button
+								td.cell-center: span.check-icon.check-icon--main
+								td.cell-center: span.check-icon.check-icon--accent
+							tr 
+								td.cell-detail: p Quizzes, Assignments, and Tests
+								td.cell-center: span.check-icon.check-icon--main
+								td.cell-center: span.check-icon.check-icon--accent
+							tr 
+								td.cell-detail: p Excel, PPT, and PDF Files
+								td.cell-center: span.check-icon.check-icon--main
+								td.cell-center: span.check-icon.check-icon--accent
+							tr 
+								td.cell-detail: p Digital Blockchain Verified Certificate
+								td.cell-center: span.check-icon.check-icon--main
+								td.cell-center: span.check-icon.check-icon--accent
+							tr 
+								td.cell-detail: p Another Shared Benefit
+								td.cell-center: span.check-icon.check-icon--main
+								td.cell-center: span.check-icon.check-icon--accent
+							tr 
+								td.cell-detail: p Another Shared Benefit
+								td.cell-center: span.check-icon.check-icon--main
+								td.cell-center: span.check-icon.check-icon--accent
+							tr 
+								td.cell-detail: p Another Shared Benefit
+								td.cell-center: span.check-icon.check-icon--miss
+								td.cell-center: span.check-icon.check-icon--accent
+							tr 
+								td.cell-detail
+									p All Certificate Programs
+									include ../components/help-button
+								td.cell-center: span.check-icon.check-icon--miss
+								td.cell-center: span.check-icon.check-icon--accent
+							tr 
+								td.cell-detail
+									p All Certificate Programs
+									include ../components/help-button
+								td.cell-center: span.check-icon.check-icon--miss
+								td.cell-center: span.check-icon.check-icon--accent
+							tr 
+								td.cell-detail
+									p All Certificate Programs
+									include ../components/help-button
+								td.cell-center: span.check-icon.check-icon--miss
+								td.cell-center: span.check-icon.check-icon--accent
+							tr 
+								td.cell-detail
+									p One FREE Financial Modeling Competition
+									include ../components/help-button
+								td.cell-center: span.check-icon.check-icon--miss
+								td.cell-center: span.check-icon.check-icon--accent
+						tfoot
+							tr 
+								td 
+								td.cell-center
+									h4.pricing-details__title Basic
+									p.pricing-details__per-year $564 / year
+									button.btn-fill.btn-fill--main 
+										span Enroll Now
+								td.cell-center
+									h4.pricing-details__title Full-Immersion
+									p.pricing-details__per-year $924 / year
+									button.btn-fill.btn-fill--accent
+											span Enroll Now
+
+		.faq
+
+
+

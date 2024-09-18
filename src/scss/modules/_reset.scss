@@ -125,6 +125,7 @@ body {
   min-width: 320px;
   @include font(400);
   color: var(--text-color);
+  font-size: var(--fs-16-14);
   line-height: 120%;
   background: var(--body-bg-color);
 }
