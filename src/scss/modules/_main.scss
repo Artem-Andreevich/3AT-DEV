@@ -20,16 +20,26 @@
 .container {
 	max-width: calc(1132px + (var(--bs-gutter-x) * .5));
 }
-.breakpoints {
-	@include breakpoint(xxl) { 
-		font-size: 13px;
+.offcanvas {
+	padding: 40px 20px 80px 20px;
+
+	&__content {
+		overflow: auto;
+		padding: 10px 15px;
 	}
-	@include breakpoint(xl) {
-		font-size: 12px;
+	&__close {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		z-index: 1100;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: var(--size-40-30);
+		height: var(--size-40-30);
+		color: #fff;
+		transition: $trans;
 	}
-	@include breakpoint(lg) {
-		display: none;
-	}  
 }
 .page {
 	margin-top: calc(var(--header-height) * -1);
@@ -297,11 +307,31 @@
 		max-width: 164px;
 		height: var(--size-48-40);
 		box-shadow: var(--shadow-md);
+		transition: $trans;
+		outline: 0px solid transparent;
 		&--main {
 			background-color: var(--main-color);
+			&:active {
+				box-shadow: 0 0 0 0 var(--accent-color);
+			}
+			@media( hover : hover ){
+				&:hover {
+					background-color: var(--accent-color);
+					border-color: var(--accent-color);
+				}
+			}
 		}
 		&--accent {
 			background-color: var(--accent-color);
+			&:active {
+				box-shadow: 0 0 0 0 var(--main-color);
+			}
+			@media( hover : hover ){
+				&:hover {
+					background-color: var(--main-color);
+					border-color: var(--main-color);
+				}
+			}
 		}
 	}
 }
@@ -331,6 +361,25 @@
 		z-index: 500;
 	}
 }
+.burger {
+	width: fit-content;
+    padding: 8px;
+	background: var(--main-color);
+    border-radius: var(--border-radius-main);
+	box-shadow: var(--shadow-xs);
+	&__icon {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		> span {
+			display: block;
+			width: 24px;
+			height: 2px;
+			background-color: #fff;
+			transition: $trans;
+		}
+	}
+}
 
 
 /* ENTITIES */
@@ -338,12 +387,53 @@
 	display: flex;
 	align-items: center;
 	gap: 32px;
-	color: #fff;
-
+	&__link {
+		position: relative;
+		display: block;
+		color: #fff;
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -4px;
+			left: 0;
+			right: 0;
+			display: block;
+			width: 0;
+			height: 1px;
+			background-color: #fff;
+			transition: $trans;
+		}
+		&--cta {
+			padding: 6px 16px;
+			@include font(700);
+			line-height: 170%;
+			border: 1px solid #fff;
+			border-radius: var(--border-radius-main);
+			transition: $trans;
+			&::after { content: none;}
+			&:active {
+				background-color: var(--accent-color);
+				border-color: var(--accent-color);
+			}
+			@media( hover : hover ){
+				&:hover {
+					background-color: var(--main-color);
+					border-color: var(--main-color);
+				}
+			}
+		}
+		@media( hover : hover ){
+			&:hover {
+				&::after {
+					width: 100%;
+				}
+			}
+		}
+	}
 	.break-nav {
 		display: block;
 		width: 1px;
-		height: 100%;
+		height: 40px;
 		background-color: #fff;
 	}
 }
@@ -505,10 +595,8 @@
 	}
 }
 .search-form {
-
 	position: relative;
 	width: 100%;
-
 	input {
 		display: -webkit-box;
 		line-clamp: 1;
@@ -535,11 +623,21 @@
 			font-size: var(--fs-16-14);
 			line-height: 120%;
 		}
-		&:hover, &:focus {
+		&:hover {
 			box-shadow: 0 0 0 0.07rem var(--accent-color-hover);
 		}
+		&:focus {
+			background: #fff;
+			color: var(--accent-color);
+			&::placeholder {
+				color: var(--accent-color);
+			}
+			~ .search-form__button {
+				color: var(--accent-color);
+			}
+		}
 	}
-	button{
+	&__button {
 		position: absolute;
 		top: 50%;
 		left: 16px;
@@ -548,7 +646,16 @@
 		background: none;
 		transform: translateY(-60%);
 		transition: $trans;
-		&:hover { color: var(--accent-color-hover);}
+		@media( hover : hover ){
+			&:hover { color: var(--accent-color-hover);}
+		}
+	}
+}
+.menu-offcanvas {
+	background-color: var(--accent-color);
+	.nav {
+		margin-top: var(--page-gap);
+		flex-direction: column;
 	}
 }
 
@@ -563,21 +670,42 @@
 	height: var(--header-height);
 	padding: 12px 0;
 	background: transparent;
-	z-index: 10;
+	z-index: 600;
 	transition: $trans;
 	&__row {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		gap: 24px;
+		@include breakpoint(md) {
+			justify-content: end;
+		}
 	}
 	&__search {
 		width: 100%;
 		max-width: 390px;
+		@include breakpoint(md) {
+			display: none;
+		}
+	}
+	&__nav {
+		@include breakpoint(md) {
+			display: none;
+		}
+	}
+	&__burger {
+		display: none;
+		@include breakpoint(md) {
+			display: flex;
+		}
 	}
 	&.fixed {
 		background: linear-gradient(32.69deg, #132E57 21.82%, #255BAC 100%);
 		box-shadow: var(--shadow-xs);
-		// background: var(--accent-color);
+		@include breakpoint(md) {
+			background: none;
+			box-shadow: none;
+		}
 	}
 }
 .footer {
@@ -745,7 +873,13 @@
 					padding: 12px 16px;
 				}
 			}
-	
+		}
+
+		@include breakpoint(sm) {
+			table thead {
+				position: static;
+				top: 0;
+			}
 		}
 		@include breakpoint(xs) {
 			overflow-x: auto;

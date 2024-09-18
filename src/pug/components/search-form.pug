@@ -1,0 +1,5 @@
+include ../layouts/mixins.pug
+form.search-form(action='/search/' method='GET') 
+    input(type="text" name="q" placeholder="Search for courses, lessons, resources and courses, lessons, resources")
+    button.search-form__button
+        +svg('loop-icon', 16)(class="icon-fill")

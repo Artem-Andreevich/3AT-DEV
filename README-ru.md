@@ -1,3 +1,8 @@
+## Инструкция для запуска:
+- git clone https://github.com/Artem-Andreevich/3AT-DEV.git
+- npm i
+- gulp
+
 ## Функционал сборки:
 
 - Шаблонизатор PUG

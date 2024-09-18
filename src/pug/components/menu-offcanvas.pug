@@ -1,7 +1,13 @@
-include ../layout/mixins.pug
-.offcanvas.offcanvas-start.menu-offcanvas#menu-offcanvas
+include ../layouts/mixins.pug
+.offcanvas.offcanvas-end.menu-offcanvas#menu-offcanvas
 
     button.offcanvas__close(type="button" data-bs-dismiss="offcanvas" aria-label="Закрыть")
-        +svg('close', 12)(class='icon color-white')
+        +svg('close-icon', 16)(class='icon')
 
     .offcanvas__content
+        include ./search-form
+        ul.nav
+            li: a.nav__link(href="#") All Courses
+            li: a.nav__link(href="#") For Business
+            li: a.nav__link(href="#") Log in
+            li: a.nav__link.nav__link--cta(href="#") Get Started

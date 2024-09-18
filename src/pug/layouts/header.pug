@@ -3,14 +3,16 @@ header.header
     .container
         .header__row 
             .header__search
-                form.search-form(action='/search/' method='GET') 
-                    input(type="text" name="q" placeholder="Search for courses, lessons, resources and courses, lessons, resources")
-                    button
-                        +svg('loop-icon', 16)(class="icon-fill")
+                include ../components/search-form
             nav.header__nav
                 ul.nav
                     li: a.nav__link(href="#") All Courses
                     li: a.nav__link(href="#") For Business
-                    li.break-nav
+                    li: .break-nav
                     li: a.nav__link(href="#") Log in
                     li: a.nav__link.nav__link--cta(href="#") Get Started
+            button.header__burger.burger(type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-offcanvas")
+                .burger__icon
+                    span
+                    span
+                    span

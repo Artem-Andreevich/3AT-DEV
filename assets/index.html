@@ -23,7 +23,33 @@
       <symbol id="loop-icon" viewBox="0 0 16 16">
         <path d="M5.94286 0C7.519 0 9.03059 0.62612 10.1451 1.74062C11.2596 2.85512 11.8857 4.36671 11.8857 5.94286C11.8857 7.41486 11.3463 8.768 10.4594 9.81029L10.7063 10.0571H11.4286L16 14.6286L14.6286 16L10.0571 11.4286V10.7063L9.81029 10.4594C8.768 11.3463 7.41486 11.8857 5.94286 11.8857C4.36671 11.8857 2.85512 11.2596 1.74062 10.1451C0.62612 9.03059 0 7.519 0 5.94286C0 4.36671 0.62612 2.85512 1.74062 1.74062C2.85512 0.62612 4.36671 0 5.94286 0ZM5.94286 1.82857C3.65714 1.82857 1.82857 3.65714 1.82857 5.94286C1.82857 8.22857 3.65714 10.0571 5.94286 10.0571C8.22857 10.0571 10.0571 8.22857 10.0571 5.94286C10.0571 3.65714 8.22857 1.82857 5.94286 1.82857Z"></path>
       </symbol>
+      <symbol id="close-icon" viewBox="0 0 0.0617378 0.0617378">
+        <path fill="none" stroke-width="0.00686019" stroke-linecap="round" stroke-linejoin="round" d="M0.00343009 0.00343009l0.0548776 0.0548776m0 -0.0548776l-0.0548776 0.0548776"></path>
+      </symbol>
     </svg>
+    <div class="offcanvas offcanvas-end menu-offcanvas" id="menu-offcanvas">
+      <button class="offcanvas__close" type="button" data-bs-dismiss="offcanvas" aria-label="Закрыть">
+            <svg class="icon" width="16px" height="16px">
+              <use xlink:href="#close-icon"></use>
+            </svg>
+      </button>
+      <div class="offcanvas__content">
+        <form class="search-form" action="/search/" method="GET"> 
+          <input type="text" name="q" placeholder="Search for courses, lessons, resources and courses, lessons, resources"/>
+          <button class="search-form__button">
+                    <svg class="icon-fill" width="16px" height="16px">
+                      <use xlink:href="#loop-icon"></use>
+                    </svg>
+          </button>
+        </form>
+        <ul class="nav">
+          <li><a class="nav__link" href="#">All Courses</a></li>
+          <li><a class="nav__link" href="#">For Business</a></li>
+          <li><a class="nav__link" href="#">Log in</a></li>
+          <li><a class="nav__link nav__link--cta" href="#">Get Started</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="wrapper"> 
       <header class="header">
         <div class="container">
@@ -31,10 +57,10 @@
             <div class="header__search">
               <form class="search-form" action="/search/" method="GET"> 
                 <input type="text" name="q" placeholder="Search for courses, lessons, resources and courses, lessons, resources"/>
-                <button>
-                        <svg class="icon-fill" width="16px" height="16px">
-                          <use xlink:href="#loop-icon"></use>
-                        </svg>
+                <button class="search-form__button">
+                                <svg class="icon-fill" width="16px" height="16px">
+                                  <use xlink:href="#loop-icon"></use>
+                                </svg>
                 </button>
               </form>
             </div>
@@ -42,11 +68,16 @@
               <ul class="nav">
                 <li><a class="nav__link" href="#">All Courses</a></li>
                 <li><a class="nav__link" href="#">For Business</a></li>
-                <li class="break-nav"></li>
+                <li>
+                  <div class="break-nav"></div>
+                </li>
                 <li><a class="nav__link" href="#">Log in</a></li>
                 <li><a class="nav__link nav__link--cta" href="#">Get Started</a></li>
               </ul>
             </nav>
+            <button class="header__burger burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-offcanvas">
+              <div class="burger__icon"><span></span><span></span><span></span></div>
+            </button>
           </div>
         </div>
       </header>
