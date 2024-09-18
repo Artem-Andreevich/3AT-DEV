@@ -61,20 +61,17 @@
 
 @include breakpoint(xxl) {
 	:root {
-        --fs-72-32: 3rem;
-        --fs-48-24: 2.25rem;
-        --fs-36-24: 2rem;
-        --fs-32-24: 1.875rem;
+        // --fs-72-32: 3rem;
+        // --fs-48-24: 2.25rem;
+        // --fs-36-24: 2rem;
+        // --fs-32-24: 1.875rem;
 	}
 }
 @include breakpoint(xl) {
 	:root {
         --fs-72-32: 2.625rem;
-        --fs-36-24: 1.5rem;
-        --fs-32-24: 1.5rem;
+
         --fs-24-18: 1.375rem;
-        --fs-16-14: 0.875rem;
-        --fs-14-12: 0.75rem;
 	}
 }
 		
@@ -83,10 +80,14 @@
         --fs-72-32: 2.25rem;
 		--fs-56-32: 2.625rem;
         --fs-48-24: 2rem;
+		--fs-36-24: 1.5rem;
+        --fs-32-24: 1.5rem;
         --fs-24-18: 1.125rem;
         --fs-24-lg-16: 1rem;
         --fs-18-16: 1rem;
         --fs-18-14: 0.875rem;
+        --fs-16-14: 0.875rem;
+        --fs-14-12: 0.75rem;
         --size-60-50: 50px;
         --size-60-40: 40px;
         --size-50-40: 40px;

@@ -21,7 +21,7 @@
 	max-width: calc(1132px + (var(--bs-gutter-x) * .5));
 }
 .offcanvas {
-	padding: 40px 20px 80px 20px;
+	padding: 40px 20px 20px 20px;
 
 	&__content {
 		overflow: auto;
@@ -44,16 +44,25 @@
 .page {
 	margin-top: calc(var(--header-height) * -1);
 	&__title {
-		font-size: var(--fs-48-24);
-		font-family: $bold;
+		@include font(700);
+		font-size: var(--fs-32-24);
+		color: var(--accent-color);
+		text-align: center;
+		line-height: 135%;
 	}
 	&__subtitle {
+		@include font(700);
 		font-size: var(--fs-24-18);
-		font-family: $bold;
+		color: var(--accent-color);
+		text-align: center;
+		line-height: 135%;
 	}
 	&__heading {
+		@include font(700);
 		font-size: var(--fs-18-16);
-		font-family: $bold;
+		color: var(--accent-color);
+		text-align: center;
+		line-height: 135%;
 	}
 	&__checkbox {
 		position: relative;
@@ -311,26 +320,26 @@
 		outline: 0px solid transparent;
 		&--main {
 			background-color: var(--main-color);
-			&:active {
-				box-shadow: 0 0 0 0 var(--accent-color);
-			}
 			@media( hover : hover ){
 				&:hover {
 					background-color: var(--accent-color);
 					border-color: var(--accent-color);
 				}
 			}
+			&:active {
+				box-shadow: 0 0 0 0 var(--accent-color);
+			}
 		}
 		&--accent {
 			background-color: var(--accent-color);
-			&:active {
-				box-shadow: 0 0 0 0 var(--main-color);
-			}
 			@media( hover : hover ){
 				&:hover {
 					background-color: var(--main-color);
 					border-color: var(--main-color);
 				}
+			}
+			&:active {
+				box-shadow: 0 0 0 0 var(--main-color);
 			}
 		}
 	}
@@ -411,15 +420,15 @@
 			border-radius: var(--border-radius-main);
 			transition: $trans;
 			&::after { content: none;}
-			&:active {
-				background-color: var(--accent-color);
-				border-color: var(--accent-color);
-			}
 			@media( hover : hover ){
 				&:hover {
 					background-color: var(--main-color);
 					border-color: var(--main-color);
 				}
+			}
+			&:active {
+				background-color: var(--accent-color);
+				border-color: var(--accent-color);
 			}
 		}
 		@media( hover : hover ){
@@ -656,6 +665,49 @@
 	.nav {
 		margin-top: var(--page-gap);
 		flex-direction: column;
+	}
+}
+.faq-accordion {
+	max-width: 930px;
+	margin: calc(var(--page-gap) / 2.5) auto 0;
+	&__item {
+		border-bottom: 1px solid #EBEBEB;
+	}
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+		width: 100%;
+		padding: 14px 0;
+		@include font(700);
+		font-size: var(--fs-18-16);
+		color: #676767;
+		line-height: 135%;
+		text-align: left;
+		&::after {
+			content: "";
+			display: block;
+			flex-shrink: 0;
+			width: 20px;
+			height: 20px;
+			background: url(../img/plus.svg) no-repeat;
+			transform: rotate(45deg);
+			transition: $trans;
+		}
+		&.collapsed {
+			&::after {
+				transform: rotate(0);
+			}
+		}
+
+	}
+	&__content {
+		padding-bottom: 14px;
+		@include font(400);
+		color: #676767;
+		font-size: var(--fs-16-14);
+		line-height: 150%
 	}
 }
 
@@ -896,11 +948,11 @@
 		}
 	}
 }
-
 .faq {
-	background: #fff;
+	display: block;
 	margin-top: var(--page-gap);
-	height: 300px;
+	padding: calc(var(--page-gap) * 1.5) 0;
+	background: #fff;
 }
 
 
