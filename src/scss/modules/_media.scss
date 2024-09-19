@@ -11,7 +11,6 @@
     .page__content table {display: block;overflow-x: auto;white-space: nowrap; width: 100%;}
     .open-menu {padding-right: 0px;}
     .bottom-fixed { display: flex; }
-    .offcanvas__close { right: -30px;}
 }
 
 @media (max-width: $md-break) and (min-width: 0px) {
