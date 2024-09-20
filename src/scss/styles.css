@@ -1343,7 +1343,8 @@ footer {
 
 .pricing-hero {
   min-height: calc(var(--page-gap) * 8);
-  background: url(../img/bg.svg) no-repeat;
+  background: linear-gradient(32.69deg, #132E57 21.82%, #19478c 100%);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
 }
