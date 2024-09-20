@@ -1331,7 +1331,7 @@ footer {
   }
 }
 .header.fixed {
-  background: linear-gradient(32.69deg, #132E57 21.82%, #255BAC 100%);
+  background: linear-gradient(45deg, var(--accent-color) 25%, var(--main-color) 100%);
   box-shadow: var(--shadow-xs);
 }
 @media (max-width: 991px) and (min-width: 0px) {
@@ -1439,6 +1439,7 @@ footer {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
+  border-radius: calc(var(--border-radius-main) * 2);
   box-shadow: var(--shadow-md);
 }
 .pricing-details__table table .cell-main {
